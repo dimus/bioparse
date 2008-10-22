@@ -4,6 +4,6 @@
 
 %pre
   %code
-    - @parsed_names.each do |pn| 
-      = pn.to_json + "\n"
-      
+    [
+    = @parsed_names.map {|pn| pn.to_json}.join(",\n")
+    ]
